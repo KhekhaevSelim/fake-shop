@@ -1,0 +1,85 @@
+.item{
+    width: 310px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.hit{
+    display: flex;
+    justify-content: end;
+}
+.hitImg{
+    width: 50px;
+    height: 50px;
+}
+.blockImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img{
+    width: 220px;
+    height: 190px;
+}
+
+.blockCategory{
+    width: 90%;
+display: flex;
+    justify-content: start;
+}
+
+.category{
+    padding: 0;
+    color : grey;
+    text-align: left;
+}
+
+.blockTitle{
+    width: 90%;
+    min-height: 15%;
+    display: flex;
+    justify-content: start;
+}
+
+.title{
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.blockButton{
+    display: flex;
+    justify-content: start;
+align-items: center;
+    width: 90%;
+}
+.cardCountBtn{
+    width: 20px;
+    height: 20px;
+    border : none;
+    background-color: white;
+    color: grey;
+}
+
+.blockPrice{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.price{
+    /*margin-top: 30px;*/
+    font-weight: 900;
+    font-size: 22px;
+}
+.ruble{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}

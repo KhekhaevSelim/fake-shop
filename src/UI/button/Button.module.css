@@ -1,0 +1,14 @@
+.btnOnCard{
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #4056A1;
+    border: none;
+}
+.btnOutCard{
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #00B177;
+    border: none;
+}

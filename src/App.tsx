@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react';
 
+import './App.module.css';
+import {useSelector} from "react-redux";
+import {AppRootStateType} from "./BLL/Store";
+import {useAppDispatch} from "./customHooks/useAppDispatch";
+import {ProductBusinessType, setProductsTC} from "./BLL/Products-reducer";
+import {ResponseType} from "./DAL/APIproducts";
+import ProductItem from "./UI/productItem/ProductItem";
+import style from "./App.module.css"
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const products = useSelector<AppRootStateType, Array<ProductBusinessType>>(state => state.products)
+    const dispatch = useAppDispatch()
+    useEffect(() => {
+    dispatch(setProductsTC())
+    }, [])
+    return (
+        <div className={style.items}>
+            {products.map(el => {
+                return (
+                   <ProductItem productItem={el}/>
+                )
+            })}
+        </div>
+    );
 }
 
 export default App;

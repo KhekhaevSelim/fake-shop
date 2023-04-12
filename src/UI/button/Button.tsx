@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import style from "./Button.module.css"
 import {useAppDispatch} from "../../customHooks/useAppDispatch";
 import {decrementAC, incrementAC, removeCardAC} from "../../BLL/Products-reducer";
@@ -22,10 +22,7 @@ const dispatch = useAppDispatch()
     const increment = ( id : string) => {
     dispatch(incrementAC(id))
     }
-    // if(props.cardCount === 0){
-    //     dispatch(removeCardAC(props.id))
-    // }
-    // let finalClassName = props.inCard ? style.btnOnCard : style.btnOutCard
+
     return (
         props.inCard ?
             <>

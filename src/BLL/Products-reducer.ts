@@ -1,9 +1,6 @@
 import {APIproducts, ResponseType} from "../DAL/APIproducts";
 import {Dispatch} from "redux";
-type ProductType = {
-    inCard : boolean
-    cardCount : number
-}
+
 export type ProductBusinessType = ResponseType & ProductType
 const initialState : Array<ProductBusinessType> = []
 export const productsReducer = ( state = initialState, action : ActionsType) : Array<ProductBusinessType> => {
@@ -47,3 +44,7 @@ type ActionsType =
     | ReturnType<typeof decrementAC>
     | ReturnType<typeof removeCardAC>
     | ReturnType<typeof incrementAC>
+type ProductType = {
+    inCard : boolean
+    cardCount : number
+}
